@@ -17,6 +17,7 @@
 #navbar li{
     list-style: none;
     padding:0 20px;
+    position: relative;
 }
 #navbar li a{
     text-decoration: none;
@@ -30,7 +31,12 @@
 {
     color:darkgray;
 }
-/* #navbar  li a:active{
-    color :blue */
-
-/* } */
+#navbar li .active::after{
+    content:"";
+    width:55%;
+    height:2px;
+    background:darkgray ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px
+}
