@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Realtime Teacher</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>AI Teacher</h1>
+        <button id="startBtn">Start lesson</button>
+        <label style="margin-left:auto">
+          Voice
+          <select id="voiceSelect" disabled>
+            <option>OpenAI realtime voice</option>
+          </select>
+        </label>
+      </header>
+
+      <section class="stage">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="#f5f5f5" stroke="#333" stroke-width="3" />
+            <circle cx="75" cy="85" r="8" fill="#333" />
+            <circle cx="125" cy="85" r="8" fill="#333" />
+            <rect id="mouth" x="70" y="125" width="60" height="4" rx="2" fill="#e53935" />
+          </svg>
+        </div>
+        <div class="meter">
+          <div id="level"></div>
+        </div>
+      </section>
+
+      <section class="transcript" id="transcript"></section>
+
+      <footer>
+        <textarea id="persona" placeholder="Teaching persona...">You are my private tutor. Teach me like a patient, encouraging teacher. Teach one micro-concept at a time, ask a short check, correct gently, adapt difficulty, keep it concise, end with a question.</textarea>
+        <textarea id="memory" placeholder="Short progress memory (optional)"></textarea>
+      </footer>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
